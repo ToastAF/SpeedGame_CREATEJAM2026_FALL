@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(movementVector.magnitude > 0.15f)
         {
