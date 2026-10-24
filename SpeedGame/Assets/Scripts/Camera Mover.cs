@@ -30,12 +30,12 @@ public class CameraMover : MonoBehaviour
     {
         if (Input.GetAxis("Mouse X") > 0.1f) // Rotate camera around player
         {
-            Debug.Log("Right!");
+            //Debug.Log("Right!");
             rotateObject.transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
         }
         else if(Input.GetAxis("Mouse X") < -0.1f)
         {
-            Debug.Log("Left!");
+            //Debug.Log("Left!");
             rotateObject.transform.Rotate(new Vector3(0, -rotateSpeed * Time.deltaTime, 0));
         }
         //Debug.Log(Input.GetAxis("Mouse X"));
