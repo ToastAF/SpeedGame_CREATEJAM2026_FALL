@@ -8,9 +8,23 @@ public class Explosion : MonoBehaviour
 
     public bool SpreadsFire;
 
+    private float Timer = .2f;
+
     private void Start()
     {
         FireSpreaderController = FindObjectOfType<FireSpreaderController>();
+    }
+
+    private void Update()
+    {
+        if (Timer > 0)
+        {
+            Timer -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +42,5 @@ public class Explosion : MonoBehaviour
                 FireSpreaderController.SpawnFire(other.gameObject);
             }
         }
-
-        Destroy(gameObject);
     }
 }

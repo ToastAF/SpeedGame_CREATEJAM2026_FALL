@@ -27,6 +27,8 @@ public class Fire : MonoBehaviour
         burnMaterial = GetComponentInParent<MeshRenderer>().materials[1];
 
         particles = new ParticleSystem.Particle[ParticleSystem.main.maxParticles];
+
+        GetComponentInParent<FlameAble>().Fire = this;
     }
 
     private void LateUpdate()
