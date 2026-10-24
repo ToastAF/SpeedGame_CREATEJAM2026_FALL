@@ -8,18 +8,23 @@ public class FireSpreaderController : MonoBehaviour
 
     public GameObject FirePrefab;
 
-    public List<GameObject> CanGetFire;
+    public List<GameObject> ObejctsOnFire;
 
     public float SpreadFireDelay = 10f;
 
     private float _spreadFireTimer = 0f;
 
-    public Material BurnMaterial;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        FlameAble[] flammables = FindObjectsOfType<FlameAble>();
+
+        for (int i = 0; i < 30; i++)
+        {
+            FireStarters.Add(flammables[Random.Range(0, flammables.Length)].gameObject);
+        }
+
         foreach (var item in FireStarters)
         {
             SpawnFire(item);
@@ -40,17 +45,16 @@ public class FireSpreaderController : MonoBehaviour
         }
     }
 
-    private void SpreadFire()
+    public void SpreadFire()
     {
         CleanListUp();
 
-        if (CanGetFire.Count == 0)
+        if (ObejctsOnFire.Count == 0)
         {
             return;
         }
 
-        SpawnFire(CanGetFire[Random.Range(0, CanGetFire.Count)]);
-
+        ObejctsOnFire[Random.Range(0, ObejctsOnFire.Count)].GetComponentInChildren<Fire>().CastFire();
     }
 
     public void SpawnFire(GameObject gameObject)
@@ -66,21 +70,25 @@ public class FireSpreaderController : MonoBehaviour
 
         Fire fire = fireGM.GetComponent<Fire>();
         fire.FireSpreaderController = this;
+
+        ObejctsOnFire.Add(gameObject);
     }
 
 
     private void CleanListUp()
     {
-        foreach (var item in CanGetFire.ToArray())
+        foreach (var item in ObejctsOnFire.ToArray())
         {
             if (item == null)
             {
-                CanGetFire.Remove(item);
+                ObejctsOnFire.Remove(item);
             }
-
-            if (item.GetComponentInChildren<Fire>() != null)
+            else
             {
-                CanGetFire.Remove(item);
+                if (item.GetComponentInChildren<Fire>() == null)
+                {
+                    ObejctsOnFire.Remove(item);
+                }
             }
         }
     }

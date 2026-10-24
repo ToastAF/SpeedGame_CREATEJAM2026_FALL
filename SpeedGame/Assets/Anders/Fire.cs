@@ -30,6 +30,11 @@ public class Fire : MonoBehaviour
 
     public List<Material> activeBurnMaterials;
 
+    public bool HasBeenExstrichs;
+    public float DestoryTimer;
+    public GameObject ExstrichsParticel;
+
+
     private void Start()
     {
         if (GetComponent<MeshRenderer>() != null) allRenderers.Add(GetComponent<MeshRenderer>());
@@ -86,6 +91,9 @@ public class Fire : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (HasBeenExstrichs)
+            { return; }
+
         if (Extinguish != null)
         {
             int count = ParticleSystem.GetParticles(particles);
@@ -121,6 +129,19 @@ public class Fire : MonoBehaviour
 
     private void Update()
     {
+        if (HasBeenExstrichs)
+        {
+            if (DestoryTimer > 10)
+            {
+                Destroy(gameObject);
+            }
+
+            DestoryTimer += Time.deltaTime;
+
+            return;
+        }
+
+
         if (Extinguish == null)
         {
             if (Intensity < 1f)
@@ -130,17 +151,21 @@ public class Fire : MonoBehaviour
         }
         else
         {
-            Intensity -= Time.deltaTime * 0.1f;
+            Intensity =  0;
 
-            if (Intensity < 0f)
+            if (Intensity <= 0f)
             {
-                Destroy(gameObject);
+                FindAnyObjectByType<ScorerKeeper>().AddCombo(20);
+
+                HasBeenExstrichs = true;
+                Destroy(gameObject.transform.GetChild(0).gameObject);
+                Instantiate(ExstrichsParticel,transform.position, Quaternion.identity, this.transform);
             }
         }
 
         var emission = ParticleSystem.emission;
 
-        emission.rateOverTime = Mathf.Lerp(1f, 10, Intensity);
+        emission.rateOverTime = Mathf.Lerp(3f, 15, Intensity);
 
 
 
@@ -150,19 +175,16 @@ public class Fire : MonoBehaviour
 
             if (value > .07f && SpreadCount == 0)
             {
-                CastFire();
                 SpreadCount += 1;
             }
 
             if (value > .3f && SpreadCount == 1)
             {
-                CastFire();
                 SpreadCount += 1;
             }
 
             if (value > .75f && SpreadCount == 2)
             {
-                CastFire();
                 SpreadCount += 1;
             }
         }
@@ -171,7 +193,6 @@ public class Fire : MonoBehaviour
             if (transform.parent != null)
             {
                 GameObject parent = transform.parent.gameObject;
-                transform.parent = null;
                 Destroy(parent);
             }
         }
@@ -185,13 +206,24 @@ public class Fire : MonoBehaviour
     {
         Debug.Log("CastFire called");
 
+        List<GameObject> list = new List<GameObject>();
+
         Collider[] hits = Physics.OverlapSphere(transform.position, 3f);
         foreach (var col in hits)
         {
             if (col.GetComponent<FlameAble>() == null) continue;
             if (col.GetComponentInChildren<Fire>() != null) continue;
-            FireSpreaderController.CanGetFire.Add(col.gameObject);
+            list.Add(col.gameObject);
         }
+
+        if (list.Count > 0)
+        {
+            FireSpreaderController.SpreadFire();
+            return;
+        }
+
+        GameObject gm = list[Random.Range(0, list.Count)];
+        FireSpreaderController.SpawnFire(gm);
     }
 
     public void OnDrawGizmos()

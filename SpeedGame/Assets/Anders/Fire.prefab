@@ -59,6 +59,9 @@ MonoBehaviour:
   allRenderers: []
   childRenderers: []
   activeBurnMaterials: []
+  HasBeenExstrichs: 0
+  DestoryTimer: 0
+  ExstrichsParticel: {fileID: 5637818509447255005, guid: 52a3b9498e5952a42ac880ce76959903, type: 3}
 --- !u!1 &7385002775229576559
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +178,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 4
+      scalar: 6
       minScalar: 3
       maxCurve:
         serializedVersion: 2
@@ -228,7 +231,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.7
+      scalar: 0.9
       minScalar: 0.5
       maxCurve:
         serializedVersion: 2

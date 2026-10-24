@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2077890722159640455}
   - component: {fileID: 691309735051968247}
   - component: {fileID: 4523224717186540338}
-  - component: {fileID: 202187594504940323}
   m_Layer: 0
   m_Name: Skrivebord
   m_TagString: Untagged
@@ -91,27 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &202187594504940323
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624381710278318575}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020633264, y: 0.020633258, z: 0.020069428}
-  m_Center: {x: 0, y: 0, z: 0.00003471737}
 --- !u!1 &2447548313943684647
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +102,7 @@ GameObject:
   - component: {fileID: 5008710116477050057}
   - component: {fileID: 1671165717799749409}
   - component: {fileID: -4769548076802916453}
+  - component: {fileID: 2963140303291299723}
   m_Layer: 0
   m_Name: Skrivebord
   m_TagString: Untagged
@@ -209,6 +188,27 @@ MonoBehaviour:
   ExplosionPrefab: {fileID: 0}
   ExplosionParticels: {fileID: 0}
   Fire: {fileID: 0}
+--- !u!65 &2963140303291299723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447548313943684647}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4033905, y: 1.0500517, z: 3.3357196}
+  m_Center: {x: -0.048612177, y: 0.5035125, z: -0.0038855076}
 --- !u!1 &6297397527855546946
 GameObject:
   m_ObjectHideFlags: 0

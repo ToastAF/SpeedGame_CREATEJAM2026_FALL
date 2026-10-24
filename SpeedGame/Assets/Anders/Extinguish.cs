@@ -8,6 +8,7 @@ public class Extinguish : MonoBehaviour
 
         if (fire != null)
         {
+            Debug.Log("Extinguish hit fire");
             fire.Extinguish = this;
         }
     }
