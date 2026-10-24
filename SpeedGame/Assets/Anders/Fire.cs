@@ -155,8 +155,6 @@ public class Fire : MonoBehaviour
 
             if (Intensity <= 0f)
             {
-                FindAnyObjectByType<ScorerKeeper>().AddCombo(20);
-
                 FireNoMore();
             }
         }
@@ -202,6 +200,7 @@ public class Fire : MonoBehaviour
 
     public void FireNoMore()
     {
+        FindAnyObjectByType<ScorerKeeper>().AddCombo(20);
         HasBeenExstrichs = true;
         Destroy(gameObject.transform.GetChild(0).gameObject);
         Instantiate(ExstrichsParticel, transform.position, Quaternion.identity, this.transform);
