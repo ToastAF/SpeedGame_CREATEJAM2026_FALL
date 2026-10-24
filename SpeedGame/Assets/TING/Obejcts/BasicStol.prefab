@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 3642456868412435574}
   - component: {fileID: 6981261420537013736}
   - component: {fileID: 6466151354210607416}
+  - component: {fileID: -5995648606831119043}
   m_Layer: 0
   m_Name: BasicStol
   m_TagString: Untagged
@@ -588,7 +589,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022473951763406597}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -628,6 +629,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.5750252, z: 0.69738376}
   m_Center: {x: 0, y: 0.773375, z: 0.012865245}
+--- !u!114 &-5995648606831119043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022473951763406597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7e15d23b097c74aa6db6782e5961f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlameAble
+  CanExplode: 0
+  HeatCapbility: 0
+  ExplosionForce: 0
+  ExplosionPrefab: {fileID: 0}
+  ExplosionParticels: {fileID: 0}
+  Fire: {fileID: 0}
 --- !u!1 &8211832681402553196
 GameObject:
   m_ObjectHideFlags: 0

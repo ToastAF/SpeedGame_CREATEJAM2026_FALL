@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &175255878902468252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108405728739732311}
+  m_Layer: 0
+  m_Name: Skuffeparti Location 02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108405728739732311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175255878902468252}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 2.22, y: 0.5000001, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3764409980393422962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &710405777085066391
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,7 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObejctSpawner
   objectsToSpawn:
   - {fileID: 6250389085746917373, guid: 1bbef388b93c14e438306e0e4554879d, type: 3}
-  - {fileID: 1640060601990432718, guid: 0489b09bd73b95943a6dfaab816e6460, type: 3}
+  - {fileID: 2228040890781759349, guid: d0458637898ff14468e31db03e9e62e9, type: 3}
+  - {fileID: 7354271552068072604, guid: bb72c6b602792da439ea7cf9c9b28257, type: 3}
   SpawnLocations:
   - {fileID: 5815231311559729854}
 --- !u!1 &1370233991738711588
@@ -128,7 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObejctSpawner
   objectsToSpawn:
   - {fileID: 6250389085746917373, guid: 1bbef388b93c14e438306e0e4554879d, type: 3}
-  - {fileID: 1640060601990432718, guid: 0489b09bd73b95943a6dfaab816e6460, type: 3}
+  - {fileID: 2228040890781759349, guid: d0458637898ff14468e31db03e9e62e9, type: 3}
+  - {fileID: 7354271552068072604, guid: bb72c6b602792da439ea7cf9c9b28257, type: 3}
   SpawnLocations:
   - {fileID: 3589495218136379080}
 --- !u!1 &3249332921498845085
@@ -193,7 +226,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4500890926601932256}
-  - {fileID: 5254623027455111997}
   m_Father: {fileID: 8124295821117212937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &170589617432880504
@@ -212,10 +244,12 @@ MonoBehaviour:
   - {fileID: 4176076068650771490, guid: 46f154954efe2274bb821bf51ac6b5a6, type: 3}
   - {fileID: 8901724267658576226, guid: 15676a07fbf9f4343a8fa1eb95f84363, type: 3}
   - {fileID: 265536083140294627, guid: 9e6ce60e070f1d749bbf70d3a2a59b72, type: 3}
+  - {fileID: 8769714922832941024, guid: 0f71407cb4f056a4790fd75b8c034d48, type: 3}
+  - {fileID: 5412673795103058646, guid: c67c955ad60da4742b1b2c20f7386f23, type: 3}
+  - {fileID: 1687490260035144137, guid: 66b9e331454205c4bac9970a32ac1436, type: 3}
   - {fileID: 0}
   SpawnLocations:
   - {fileID: 6610230050248235874}
-  - {fileID: 5615812404468563700}
 --- !u!1 &3589495218136379080
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,12 +312,68 @@ Transform:
   m_Children:
   - {fileID: 7625045938028261203}
   - {fileID: 2973492534498837234}
+  - {fileID: 3764409980393422962}
   - {fileID: 6535121250495610647}
   - {fileID: 3425471342048113363}
   - {fileID: 1286358216987071096}
   - {fileID: 8194254486079189096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4903237918624221012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3764409980393422962}
+  - component: {fileID: 3224567296602618939}
+  m_Layer: 0
+  m_Name: Skuffeparti Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3764409980393422962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903237918624221012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 108405728739732311}
+  m_Father: {fileID: 8124295821117212937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3224567296602618939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903237918624221012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f98af0962985b1438615980620b2a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObejctSpawner
+  objectsToSpawn:
+  - {fileID: 4176076068650771490, guid: 46f154954efe2274bb821bf51ac6b5a6, type: 3}
+  - {fileID: 8901724267658576226, guid: 15676a07fbf9f4343a8fa1eb95f84363, type: 3}
+  - {fileID: 265536083140294627, guid: 9e6ce60e070f1d749bbf70d3a2a59b72, type: 3}
+  - {fileID: 5412673795103058646, guid: c67c955ad60da4742b1b2c20f7386f23, type: 3}
+  - {fileID: 8769714922832941024, guid: 0f71407cb4f056a4790fd75b8c034d48, type: 3}
+  - {fileID: 1687490260035144137, guid: 66b9e331454205c4bac9970a32ac1436, type: 3}
+  - {fileID: 0}
+  SpawnLocations:
+  - {fileID: 175255878902468252}
 --- !u!1 &5225362069158895044
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,40 +476,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObejctSpawner
   objectsToSpawn:
   - {fileID: 6250389085746917373, guid: 1bbef388b93c14e438306e0e4554879d, type: 3}
-  - {fileID: 1640060601990432718, guid: 0489b09bd73b95943a6dfaab816e6460, type: 3}
+  - {fileID: 2228040890781759349, guid: d0458637898ff14468e31db03e9e62e9, type: 3}
+  - {fileID: 7354271552068072604, guid: bb72c6b602792da439ea7cf9c9b28257, type: 3}
   SpawnLocations:
   - {fileID: 7103573278175236346}
---- !u!1 &5615812404468563700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5254623027455111997}
-  m_Layer: 0
-  m_Name: Skuffeparti Location 02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5254623027455111997
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615812404468563700}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.22, y: 0.5000001, z: 1.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2973492534498837234}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5815231311559729854
 GameObject:
   m_ObjectHideFlags: 0
