@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public float force = 25;
+    public float force = 10;
+
+    public FireSpreaderController FireSpreaderController;
+
+    public bool SpreadsFire;
+
+    private void Start()
+    {
+        FireSpreaderController = FindObjectOfType<FireSpreaderController>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +22,11 @@ public class Explosion : MonoBehaviour
             Vector3 direction = (rb.transform.position - transform.position).normalized;
 
             rb.AddForce(direction * force, ForceMode.Impulse);
+
+            if (SpreadsFire)
+            {
+                FireSpreaderController.SpawnFire(other.gameObject);
+            }
         }
 
         Destroy(gameObject);

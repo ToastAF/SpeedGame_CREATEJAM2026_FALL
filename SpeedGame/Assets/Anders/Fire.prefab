@@ -45,6 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1ddc48dadb7e04e978d758163e390c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fire
+  FireSpreaderController: {fileID: 0}
+  value: 0
+  Intensity: 0
+  Extinguish: {fileID: 0}
+  ParticleSystem: {fileID: 264082247353046576}
+  radius: 3
+  randomness: 0.1
+  pushStrength: 1
+  maxSpeed: 10
+  SpreadCount: 0
 --- !u!1 &7385002775229576559
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +97,7 @@ ParticleSystem:
   m_GameObject: {fileID: 7385002775229576559}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 0.7
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -151,7 +161,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -160,9 +170,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 4
-      minScalar: 5
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -213,9 +223,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 5
+      minMaxState: 3
+      scalar: 0.7
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2730,11 +2740,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
