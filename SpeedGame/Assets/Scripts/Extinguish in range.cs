@@ -4,11 +4,14 @@ public class Extinguishinrange : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Fire fire = other.GetComponentInChildren<Fire>();
+        Fire fire = other.transform.parent.gameObject.GetComponentInChildren<Fire>();
+
+        //Debug.Log(fire);
 
         if(fire != null)
         {
-            Destroy(fire.gameObject);
+            //Debug.Log("Fire Found!");
+            fire.FireNoMore();
         }
     }
 }

@@ -12,7 +12,7 @@ public class FireSpreaderController : MonoBehaviour
 
     public float SpreadFireDelay = 10f;
 
-    private float _spreadFireTimer = 0f;
+    public float _spreadFireTimer = 0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

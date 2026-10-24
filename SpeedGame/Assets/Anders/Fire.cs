@@ -34,6 +34,8 @@ public class Fire : MonoBehaviour
     public float DestoryTimer;
     public GameObject ExstrichsParticel;
 
+    public AudioSource fireDie;
+
 
     private void Start()
     {
@@ -211,6 +213,8 @@ public class Fire : MonoBehaviour
         HasBeenExstrichs = true;
         Destroy(gameObject.transform.GetChild(0).gameObject);
         Instantiate(ExstrichsParticel, transform.position, Quaternion.identity, this.transform);
+
+        fireDie.Play();
     }
 
     public void CastFire()

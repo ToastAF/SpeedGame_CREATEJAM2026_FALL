@@ -1,5 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class MissileThing : MonoBehaviour
@@ -10,9 +13,18 @@ public class MissileThing : MonoBehaviour
     public int ammoCount = 1;
     public int maxAmmoCount = 5;
 
+    public TextMeshProUGUI ammoText;
+
+    private void Start()
+    {
+        StartCoroutine(RefreshAmmo());
+    }
+
     private void Update()
     {
-        ammoCount = Mathf.Clamp(ammoCount, 0, ammoCount);
+        ammoCount = Mathf.Clamp(ammoCount, 0, maxAmmoCount);
+
+        ammoText.text = "Missile: " + ammoCount + "/" + maxAmmoCount;
     }
 
     void OnShoot(InputValue input)
@@ -22,5 +34,14 @@ public class MissileThing : MonoBehaviour
             Instantiate(missile, shootDirection.position, transform.rotation);
             ammoCount--;
         }
+    }
+
+    IEnumerator RefreshAmmo()
+    {
+        yield return new WaitForSeconds(4);
+
+        if(ammoCount < maxAmmoCount) ammoCount++;
+
+        StartCoroutine(RefreshAmmo());
     }
 }

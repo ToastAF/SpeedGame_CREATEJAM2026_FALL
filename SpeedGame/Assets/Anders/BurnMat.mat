@@ -26,7 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BrownStart: 0.2
-    - _BurnAmount: 0
+    - _BurnAmount: 0.114142045
     - _CharStart: 0.6
     - _CharStrength: 0.9
     - _DirectionStrength: 0
