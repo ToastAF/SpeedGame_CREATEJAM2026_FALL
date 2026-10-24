@@ -220,9 +220,8 @@ public class Fire : MonoBehaviour
             list.Add(col.gameObject);
         }
 
-        if (list.Count > 0)
+        if (list.Count == 0)
         {
-            FireSpreaderController.SpreadFire();
             return;
         }
 

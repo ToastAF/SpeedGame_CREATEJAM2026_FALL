@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlameAble
   CanExplode: 1
+  CanExplodeWithHighImpact: 1
   HeatCapbility: 0.2
   ExplosionForce: 5
   ExplosionPrefab: {fileID: 2323105895106055503, guid: 72e3d38493bc3284f9ad1208067d3f98, type: 3}

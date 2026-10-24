@@ -1185,7 +1185,7 @@ MonoBehaviour:
   FireStarters: []
   FirePrefab: {fileID: 5945084730494047203, guid: e412688ee541bd34cbe94af11593afea, type: 3}
   ObejctsOnFire: []
-  SpreadFireDelay: 10
+  SpreadFireDelay: 5
 --- !u!4 &850904162
 Transform:
   m_ObjectHideFlags: 0

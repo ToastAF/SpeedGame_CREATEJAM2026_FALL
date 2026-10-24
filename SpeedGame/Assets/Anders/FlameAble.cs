@@ -4,6 +4,8 @@ public class FlameAble : MonoBehaviour
 {
     [Header("Explosion")]
     public bool CanExplode;
+    public bool CanExplodeWithHighImpact;
+    [SerializeField] private float impactThreshold = 8f;
     public float HeatCapbility;
     public float ExplosionForce;
 
@@ -24,13 +26,30 @@ public class FlameAble : MonoBehaviour
         {
             if (Fire.Intensity >= HeatCapbility)
             {
-                Explosion explosion = Instantiate (ExplosionPrefab, transform.position, Quaternion.identity).GetComponent<Explosion>();
-                Instantiate(ExplosionParticels, transform.position, Quaternion.identity);
-                explosion.force = ExplosionForce;
-                explosion.SpreadsFire = true;
-
-                Destroy(gameObject);
+                Explode();
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (CanExplodeWithHighImpact == false)
+            return;
+
+
+        if (collision.relativeVelocity.magnitude >= impactThreshold)
+        {
+            Explode();
+        }
+    }
+
+    public void Explode()
+    {
+        Explosion explosion = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity).GetComponent<Explosion>();
+        Instantiate(ExplosionParticels, transform.position, Quaternion.identity);
+        explosion.force = ExplosionForce;
+        explosion.SpreadsFire = true;
+
+        Destroy(gameObject);
     }
 }
