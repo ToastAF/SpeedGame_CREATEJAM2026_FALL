@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fire
   FireSpreaderController: {fileID: 0}
+  burnMaterial: {fileID: 2100000, guid: 3001893d68914fe4f8d996dc3ae178d0, type: 2}
   value: 0
   Intensity: 0
   Extinguish: {fileID: 0}
@@ -55,6 +56,9 @@ MonoBehaviour:
   pushStrength: 1
   maxSpeed: 10
   SpreadCount: 0
+  allRenderers: []
+  childRenderers: []
+  activeBurnMaterials: []
 --- !u!1 &7385002775229576559
 GameObject:
   m_ObjectHideFlags: 0

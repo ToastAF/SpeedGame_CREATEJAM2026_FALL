@@ -1,12 +1,15 @@
 using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Animations;
 
 public class Fire : MonoBehaviour
 {
     public FireSpreaderController FireSpreaderController;
 
-    private Material burnMaterial;
+    public Material burnMaterial;
 
     public float value;
 
@@ -22,9 +25,59 @@ public class Fire : MonoBehaviour
 
     public int SpreadCount;
 
+    public List<MeshRenderer> allRenderers;
+    public List<MeshRenderer> childRenderers;
+
+    public List<Material> activeBurnMaterials;
+
     private void Start()
     {
-        burnMaterial = GetComponentInParent<MeshRenderer>().materials[1];
+        if (GetComponent<MeshRenderer>() != null) allRenderers.Add(GetComponent<MeshRenderer>());
+
+        childRenderers = transform.parent.GetComponentsInChildren<MeshRenderer>().ToList();
+        if(childRenderers != null)
+        {
+            //Debug.Log("Children count: " + childRenderers.Count);
+            if (childRenderers.Count > 0) 
+            {
+                foreach(MeshRenderer child in childRenderers)
+                {
+                    allRenderers.Add(child);
+                }
+            }
+
+        }
+        
+
+        foreach (MeshRenderer rend in allRenderers)
+        {
+            Material[] oldMats = rend.materials;
+
+            string burnName = burnMaterial.name + " (Instance)";
+            if (!rend.materials.Any(m => m.name == burnName))
+            {
+                Material[] newMats = new Material[oldMats.Length + 1];
+
+                for (int i = 0; i < oldMats.Length; i++)
+                    newMats[i] = oldMats[i];
+
+                newMats[newMats.Length - 1] = burnMaterial;
+
+                rend.materials = newMats;
+            }
+            else
+            {
+                Debug.Log("Burn Material: " + FindMaterial(oldMats, burnName));
+
+                float burnValue = FindMaterial(oldMats, burnName).GetFloat("_BurnAmount");
+                value = burnValue;
+            }
+
+            activeBurnMaterials.Add(rend.materials[1]);
+            //burnMaterial = rend.materials[1];
+        }
+        //Debug.Log("All renderes count: " + allRenderers.Count);
+
 
         particles = new ParticleSystem.Particle[ParticleSystem.main.maxParticles];
 
@@ -122,8 +175,10 @@ public class Fire : MonoBehaviour
                 Destroy(parent);
             }
         }
-
-        burnMaterial.SetFloat("_BurnAmount", Mathf.Lerp(0.08f, 1, value));
+        foreach(Material mat in activeBurnMaterials)
+        {
+            mat.SetFloat("_BurnAmount", Mathf.Lerp(0.08f, 1, value));
+        }
     }
 
     public void CastFire()
@@ -143,5 +198,15 @@ public class Fire : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 3f);
+    }
+
+    Material FindMaterial(Material[] mats, string name)
+    {
+        foreach (Material m in mats)
+        {
+            if (m.name.StartsWith(name))
+                return m;
+        }
+        return null;
     }
 }
