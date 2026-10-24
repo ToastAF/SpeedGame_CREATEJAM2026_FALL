@@ -157,9 +157,7 @@ public class Fire : MonoBehaviour
             {
                 FindAnyObjectByType<ScorerKeeper>().AddCombo(20);
 
-                HasBeenExstrichs = true;
-                Destroy(gameObject.transform.GetChild(0).gameObject);
-                Instantiate(ExstrichsParticel,transform.position, Quaternion.identity, this.transform);
+                FireNoMore();
             }
         }
 
@@ -200,6 +198,13 @@ public class Fire : MonoBehaviour
         {
             mat.SetFloat("_BurnAmount", Mathf.Lerp(0.08f, 1, value));
         }
+    }
+
+    public void FireNoMore()
+    {
+        HasBeenExstrichs = true;
+        Destroy(gameObject.transform.GetChild(0).gameObject);
+        Instantiate(ExstrichsParticel, transform.position, Quaternion.identity, this.transform);
     }
 
     public void CastFire()

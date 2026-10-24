@@ -95,12 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7e15d23b097c74aa6db6782e5961f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlameAble
-  CanExplode: 0
-  HeatCapbility: 0
-  ExplosionForce: 0
-  ExplosionPrefab: {fileID: 0}
-  ExplosionParticels: {fileID: 0}
-  Fire: {fileID: 0}
+  CanExplode: 1
+  HeatCapbility: 0.2
+  ExplosionForce: 5
+  ExplosionPrefab: {fileID: 2323105895106055503, guid: 72e3d38493bc3284f9ad1208067d3f98, type: 3}
+  ExplosionParticels: {fileID: 2464601341564860875, guid: 765553eca1b59ab4f869eb68a915fc51, type: 3}
+  Fire: {fileID: 550658832732988182, guid: e412688ee541bd34cbe94af11593afea, type: 3}
 --- !u!1001 &5917231628288499273
 PrefabInstance:
   m_ObjectHideFlags: 0
