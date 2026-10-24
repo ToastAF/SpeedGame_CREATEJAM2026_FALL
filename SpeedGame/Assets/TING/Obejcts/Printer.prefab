@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -5544215410851601563}
   - component: {fileID: 7906142151964216021}
   - component: {fileID: 3520187691059602190}
+  - component: {fileID: 8322457965132907272}
   m_Layer: 0
   m_Name: Printer
   m_TagString: Untagged
@@ -48,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlameAble
   CanExplode: 0
+  CanExplodeWithHighImpact: 0
+  impactThreshold: 8
   HeatCapbility: 0
   ExplosionForce: 0
   ExplosionPrefab: {fileID: 0}
@@ -101,6 +104,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2676711, y: 1.2973642, z: 1.341295}
   m_Center: {x: 0.09953585, y: -0.14868236, z: 0.00008070469}
+--- !u!114 &8322457965132907272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347360012569597661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7e15d23b097c74aa6db6782e5961f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlameAble
+  CanExplode: 1
+  CanExplodeWithHighImpact: 1
+  impactThreshold: 8
+  HeatCapbility: 0.2
+  ExplosionForce: 5
+  ExplosionPrefab: {fileID: 2323105895106055503, guid: 72e3d38493bc3284f9ad1208067d3f98, type: 3}
+  ExplosionParticels: {fileID: 2464601341564860875, guid: 765553eca1b59ab4f869eb68a915fc51, type: 3}
+  Fire: {fileID: 550658832732988182, guid: e412688ee541bd34cbe94af11593afea, type: 3}
 --- !u!1001 &2574213444760437625
 PrefabInstance:
   m_ObjectHideFlags: 0

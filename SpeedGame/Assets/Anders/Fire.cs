@@ -86,7 +86,14 @@ public class Fire : MonoBehaviour
 
         particles = new ParticleSystem.Particle[ParticleSystem.main.maxParticles];
 
-        GetComponentInParent<FlameAble>().Fire = this;
+        if (GetComponentInParent<FlameAble>() == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            GetComponentInParent<FlameAble>().Fire = this;
+        } 
     }
 
     private void LateUpdate()

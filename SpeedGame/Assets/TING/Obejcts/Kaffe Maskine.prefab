@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1831113561835563669}
   - component: {fileID: 3984416599719611107}
   - component: {fileID: 683669288016360011}
+  - component: {fileID: 4132628477781120196}
   m_Layer: 0
   m_Name: Kaffe Maskine
   m_TagString: Untagged
@@ -82,6 +83,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7358659, y: 0.7032422, z: 0.48684514}
   m_Center: {x: -0.08752179, y: 0.36392248, z: 0.011341661}
+--- !u!114 &4132628477781120196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997436287581901775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7e15d23b097c74aa6db6782e5961f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlameAble
+  CanExplode: 1
+  CanExplodeWithHighImpact: 1
+  impactThreshold: 5
+  HeatCapbility: 0.2
+  ExplosionForce: 5
+  ExplosionPrefab: {fileID: 2323105895106055503, guid: 72e3d38493bc3284f9ad1208067d3f98, type: 3}
+  ExplosionParticels: {fileID: 2464601341564860875, guid: 765553eca1b59ab4f869eb68a915fc51, type: 3}
+  Fire: {fileID: 550658832732988182, guid: e412688ee541bd34cbe94af11593afea, type: 3}
 --- !u!1001 &8286048511000938302
 PrefabInstance:
   m_ObjectHideFlags: 0
