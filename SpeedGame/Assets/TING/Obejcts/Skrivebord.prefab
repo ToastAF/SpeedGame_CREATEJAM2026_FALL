@@ -457,7 +457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: objectsToSpawn.Array.size
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2859195353526017575, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -523,7 +523,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: objectsToSpawn.Array.size
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2859195353526017575, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -587,6 +587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8333341242904430140}
     m_Modifications:
+    - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2859195353526017575, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.389
@@ -651,7 +655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: objectsToSpawn.Array.size
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2859195353526017575, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -717,7 +721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: objectsToSpawn.Array.size
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: 'objectsToSpawn.Array.data[28]'
@@ -795,7 +799,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2189620164598884162, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: objectsToSpawn.Array.size
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2859195353526017575, guid: f8a06eff0eb1095438dbadd97f1ef2bf, type: 3}
       propertyPath: m_LocalPosition.x

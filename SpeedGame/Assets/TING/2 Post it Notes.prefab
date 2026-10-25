@@ -42,7 +42,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3431467235686508646}
   serializedVersion: 5
-  m_Mass: 0.1
+  m_Mass: 0.0000001
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -80,8 +80,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.2576604, y: 0.37772024, z: 2.3166127}
-  m_Center: {x: -0.504374, y: 0.13428146, z: -0.78931284}
+  m_Size: {x: 2.1373296, y: 0.37772024, z: 2.1672049}
+  m_Center: {x: -0.003783802, y: 0.13428146, z: -0.047119856}
 --- !u!1001 &945118564946293917
 PrefabInstance:
   m_ObjectHideFlags: 0
