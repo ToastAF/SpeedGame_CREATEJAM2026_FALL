@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa75085f1fb363044af245e6113158d0
+guid: f269a87f2fac8834e81f8e1944ffaa58
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: GenTexture
-    second: {fileID: 2800000, guid: 3c5f87977d74643409c9719c2d2cdad2, type: 3}
+    second: {fileID: 2800000, guid: cc486069a11ac464eb8d1b33a561bf02, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Texture
-    second: {fileID: 2800000, guid: beb5225cdccb71d4c91da06e860f6c2d, type: 3}
+    second: {fileID: 2800000, guid: 4d5d907cd73b8bf4b807b799768396b2, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
