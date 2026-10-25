@@ -1,9 +1,13 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CountdownClock : MonoBehaviour
 {
+    public ScorerKeeper scoreScript;
+    public EndScreenTally tally;
+
     [Header("Timer")]
     public float startTime = 180f;
     public bool startOnAwake = true;
@@ -79,6 +83,10 @@ public class CountdownClock : MonoBehaviour
                 finished = true;
                 running = false;
                 onTimeUp?.Invoke();
+
+                tally.points = scoreScript.score;
+                tally.endScreenThing = true;
+                SceneManager.LoadScene("End");
             }
         }
 

@@ -334,8 +334,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Missiles: 1/5'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
-  m_sharedMaterial: {fileID: -364755185349816983, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
+  m_sharedMaterial: {fileID: -1326534360862400980, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 352926582}
   - component: {fileID: 352926581}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Points TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,6 +823,7 @@ MonoBehaviour:
   idleFloatHeight: 2
   idleFloatSpeed: 0.6
   autoAddComboForTesting: 0
+  score: 0
 --- !u!114 &352926582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,8 +846,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
-  m_sharedMaterial: {fileID: -364755185349816983, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
+  m_sharedMaterial: {fileID: -1326534360862400980, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1850,6 +1851,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1631160465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631160467}
+  - component: {fileID: 1631160466}
+  m_Layer: 0
+  m_Name: EndScreenTally
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1631160466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631160465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5843a8a223196984e8925e4bf20e14e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndScreenTally
+  endScreenThing: 0
+  points: 0
+  bro: {fileID: 0}
+--- !u!4 &1631160467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631160465}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 359.52036, y: 216.04558, z: 44.82092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646846499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1911,7 @@ GameObject:
   - component: {fileID: 1646846502}
   - component: {fileID: 1646846504}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Time TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1910,8 +1958,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
-  m_sharedMaterial: {fileID: -364755185349816983, guid: c262761f373f9fb438d2c79a961b1330, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
+  m_sharedMaterial: {fileID: -1326534360862400980, guid: 2b7fb03d2a83bb848a8867966debe7af, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2000,6 +2048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5689ba8277e66dd47bbd7ece37d62fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownClock
+  scoreScript: {fileID: 352926581}
+  tally: {fileID: 1631160466}
   startTime: 180
   startOnAwake: 1
   dangerTime: 20
@@ -2488,3 +2538,4 @@ SceneRoots:
   - {fileID: 718390677}
   - {fileID: 2050280410}
   - {fileID: 513496761}
+  - {fileID: 1631160467}

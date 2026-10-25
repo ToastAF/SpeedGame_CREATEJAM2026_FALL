@@ -46,7 +46,7 @@ public class ScorerKeeper : MonoBehaviour
     float baseFontSize;
     Color baseColor;
     Vector3 basePos;
-    int score;
+    public int score;
     TMP_Text text;
     float timer;
 
