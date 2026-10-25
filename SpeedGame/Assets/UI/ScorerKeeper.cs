@@ -9,7 +9,7 @@ public class ScorerKeeper : MonoBehaviour
     public float comboDecayPerSecond = 2.5f;
 
     [Header("Growth per combo")]
-    public float sizeIncreasePerCombo = 0.05f;
+    public float sizeIncreasePerCombo = 0.025f;
     public float growthSmoothTime = 1f;
     public Color hotColor = new Color(1f, 0.75f, 0.2f);
 

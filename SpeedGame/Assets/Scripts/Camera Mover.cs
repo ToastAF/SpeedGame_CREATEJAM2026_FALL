@@ -1,22 +1,23 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraMover : MonoBehaviour
 {
     public GameObject player;
     Camera cam;
     Rigidbody rb;
-    public Vector3 offset;
-
-    Vector3 target;
-
-    public float moveSpeed = 1;
 
     public float minFOV, maxFOV, maxMoveSpeed;
+    [SerializeField] private float fovSmoothTime = 0.3f;
+    private float fovVelocity;
 
     public GameObject rotateObject;
-    public float rotateSpeed = 1;
+    public float rotateSpeed = 3f;          
+    [SerializeField] private float rotateSmoothTime = 0.08f;
+
+    [SerializeField] private float lookSmoothTime = 0.1f;
+
+    float targetYaw, currentYaw, yawVelocity;
+    Vector3 lookPoint, lookVelocity;
 
     void Start()
     {
@@ -24,34 +25,25 @@ public class CameraMover : MonoBehaviour
 
         rb = player.GetComponent<Rigidbody>();
         cam = GetComponent<Camera>();
+
+        targetYaw = currentYaw = rotateObject.transform.eulerAngles.y;
+        lookPoint = player.transform.position;
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (Input.GetAxis("Mouse X") > 0.1f) // Rotate camera around player
-        {
-            //Debug.Log("Right!");
-            rotateObject.transform.Rotate(new Vector3(0, rotateSpeed * Time.deltaTime, 0));
-        }
-        else if(Input.GetAxis("Mouse X") < -0.1f)
-        {
-            //Debug.Log("Left!");
-            rotateObject.transform.Rotate(new Vector3(0, -rotateSpeed * Time.deltaTime, 0));
-        }
-        //Debug.Log(Input.GetAxis("Mouse X"));
-        transform.LookAt(player.transform);
+        // Rotation: direkte fra musen, ingen tærskel, ingen deltaTime
+        targetYaw += Input.GetAxis("Mouse X") * rotateSpeed;
+        currentYaw = Mathf.SmoothDampAngle(currentYaw, targetYaw, ref yawVelocity, rotateSmoothTime);
+        rotateObject.transform.rotation = Quaternion.Euler(0, currentYaw, 0);
 
-        //target = player.transform.position + offset;
+        // Kig på et blødt, forsinket punkt i stedet for spillerens eksakte position
+        lookPoint = Vector3.SmoothDamp(lookPoint, player.transform.position, ref lookVelocity, lookSmoothTime);
+        transform.LookAt(lookPoint);
 
-        //transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-    }
-
-    private void FixedUpdate()
-    {
-        //Debug.Log(rb.linearVelocity.magnitude);
-
-        float t = rb.linearVelocity.magnitude / maxMoveSpeed;
-        //t = t * t * (3 - 2 * t);
-        cam.fieldOfView = Mathf.Lerp(minFOV, maxFOV, Mathf.SmoothStep(0, 1, t));
+        // FOV
+        float t = Mathf.Clamp01(rb.linearVelocity.magnitude / maxMoveSpeed);
+        float targetFOV = Mathf.Lerp(minFOV, maxFOV, Mathf.SmoothStep(0, 1, t));
+        cam.fieldOfView = Mathf.SmoothDamp(cam.fieldOfView, targetFOV, ref fovVelocity, fovSmoothTime);
     }
 }
