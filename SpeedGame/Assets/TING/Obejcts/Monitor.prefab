@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6573702924728004917}
   - component: {fileID: 2713336404062706248}
   - component: {fileID: 1063287494764940163}
+  - component: {fileID: 8883620495073929937}
   m_Layer: 0
   m_Name: Monitor
   m_TagString: Untagged
@@ -68,8 +69,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20790017, y: 0.8203647, z: 1}
-  m_Center: {x: -0.0369547, y: -0.08981764, z: 0}
+  m_Size: {x: 0.20790017, y: 0.76148957, z: 1}
+  m_Center: {x: -0.0369547, y: 0.25791886, z: 0}
 --- !u!54 &1063287494764940163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,6 +98,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8883620495073929937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920271740101163757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7e15d23b097c74aa6db6782e5961f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlameAble
+  CanExplode: 0
+  CanExplodeWithHighImpact: 0
+  impactThreshold: 8
+  HeatCapbility: 0
+  ExplosionForce: 0
+  ExplosionPrefab: {fileID: 0}
+  ExplosionParticels: {fileID: 0}
+  Fire: {fileID: 0}
 --- !u!1001 &7606830827467212696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,11 +128,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f4db8cb8650b9ba459170af71569ec4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4db8cb8650b9ba459170af71569ec4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4db8cb8650b9ba459170af71569ec4d, type: 3}
       propertyPath: m_LocalPosition.z

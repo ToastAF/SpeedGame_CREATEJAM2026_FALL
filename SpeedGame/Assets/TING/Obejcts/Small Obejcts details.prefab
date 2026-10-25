@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5465018538755518399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2859195353526017575}
+  - component: {fileID: 2189620164598884162}
+  m_Layer: 0
+  m_Name: Small Obejcts details
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2859195353526017575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465018538755518399}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06, y: 1.141, z: -0.015010003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2189620164598884162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465018538755518399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f98af0962985b1438615980620b2a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObejctSpawner
+  objectsToSpawn:
+  - {fileID: 6746065338293753471, guid: 59f862c224cef484ba659d81b06dcf3f, type: 3}
+  - {fileID: 5235988110937886204, guid: ffdb100f20c6b574eba934f9aa2bb244, type: 3}
+  - {fileID: 8494065271214148172, guid: 616743c4c150ac542a88a8121a6df2ad, type: 3}
+  - {fileID: 211758515463157920, guid: ad9b813a88fa03f4b983b6d999f9cd02, type: 3}
+  - {fileID: 380800941383302445, guid: b036978d39312f449b917b0af6381cae, type: 3}
+  - {fileID: 3571986346700347948, guid: 671765c4b613ef5459c674ac3a128c42, type: 3}
+  - {fileID: 7431415349452179793, guid: be7f8cc52ba620f4680b0f2863706d58, type: 3}
+  - {fileID: 7448293211892151445, guid: 85672fd6b656d3c419b42a8e410edfaa, type: 3}
+  - {fileID: 1095931019035828489, guid: 7c8eabfd11e10c849a129a8681db771f, type: 3}
+  - {fileID: 4346812975982261969, guid: 7ec202a6d37c2cd49bb7818fccc75253, type: 3}
+  - {fileID: 3785201451227249238, guid: a922226905180a6488b8a682effc989d, type: 3}
+  - {fileID: 7916969992106499631, guid: 5eca69c8f544dd743ab01f8998ab28ec, type: 3}
+  - {fileID: 4568177357170859282, guid: 96a6e83a45fbec14f861f13d269e3e69, type: 3}
+  - {fileID: 5983316396692185101, guid: aeb5c98c6bdf99646aa80c239685290d, type: 3}
+  - {fileID: 2223360693127807470, guid: eee2679675ac2bc42a3393218dd9e124, type: 3}
+  - {fileID: 463655827527357471, guid: 19604b992a16ad348a4ce7f114684045, type: 3}
+  - {fileID: 5082052944482253451, guid: 74896d0dde06c3741a735a2451c2731b, type: 3}
+  - {fileID: 53652983630276732, guid: 6984b4e14572fdc4da343f1dd040ccb3, type: 3}
+  - {fileID: 2934163033405408949, guid: 48aa2ceb59f850d40b8b4997c060edcb, type: 3}
+  - {fileID: 3226392325903703837, guid: f7e5bdb34a547b34fa7cc504e12b798c, type: 3}
+  - {fileID: 4674267666159441593, guid: 733133ecd18d4244da00d6b95efbc9cf, type: 3}
+  - {fileID: 1415012152802841549, guid: 2055a30e1d9f539409de35cc0425166a, type: 3}
+  - {fileID: 3920271740101163757, guid: 74c9f02f8b699b74aa90c7d0038bd479, type: 3}
+  - {fileID: 0}
+  - {fileID: 7558563640225152773, guid: 545820a8209d3fe49a91ebc37ed8070c, type: 3}
+  - {fileID: 5593124004633572698, guid: a63c6acd572457542ad6b731fc761399, type: 3}
+  - {fileID: 5610798948678353025, guid: eaae191fa1de3cd48a47f2831a30a890, type: 3}
+  - {fileID: 0}
+  - {fileID: 3431467235686508646, guid: af2cee42ff68df549991d7487d87449e, type: 3}
+  - {fileID: 2264637171632091182, guid: 34c17a2df41397341bb4e63be33194ac, type: 3}
+  - {fileID: 3313843067516980524, guid: f397546201641c4418c5256b0c128a67, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SpawnLocations:
+  - {fileID: 5465018538755518399}
