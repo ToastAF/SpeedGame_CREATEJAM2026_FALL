@@ -20,7 +20,7 @@ public class CameraMover : MonoBehaviour
     Vector3 lookPoint, lookVelocity;
 
     void Start()
-    {
+    {   
         Cursor.lockState = CursorLockMode.Locked;
 
         rb = player.GetComponent<Rigidbody>();
