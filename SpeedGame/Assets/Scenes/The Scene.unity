@@ -604,7 +604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acddf4ae38cdf24b9ee3c009c6a730d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenMenu
-  menuObject: {fileID: 844863048}
 --- !u!1 &210380206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,10 +3065,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5689ba8277e66dd47bbd7ece37d62fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownClock
-  startTime: 60
+  startTime: 180
   startOnAwake: 1
   dangerTime: 20
-  showDecimalsBelow: 10
+  showDecimalsBelow: 20
   onTimeUp:
     m_PersistentCalls:
       m_Calls: []
