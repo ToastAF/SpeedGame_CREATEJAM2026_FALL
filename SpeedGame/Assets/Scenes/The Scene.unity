@@ -3466,7 +3466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndScreenTally
   endScreenThing: 0
   points: 0
-  bro: {fileID: 0}
+  bro: {fileID: 352926582}
 --- !u!4 &1631160467
 Transform:
   m_ObjectHideFlags: 0

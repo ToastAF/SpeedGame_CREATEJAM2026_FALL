@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Animations;
 
 public class Fire : MonoBehaviour
 {
@@ -126,7 +125,7 @@ public class Fire : MonoBehaviour
 
                     particles[i].velocity += force;
 
-                    // Begræns hastigheden
+                    // Begrï¿½ns hastigheden
                     if (particles[i].velocity.magnitude > maxSpeed)
                         particles[i].velocity = particles[i].velocity.normalized * maxSpeed;
                 }
