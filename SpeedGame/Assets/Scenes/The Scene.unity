@@ -1249,6 +1249,7 @@ MonoBehaviour:
   idleFloatSpeed: 0.6
   autoAddComboForTesting: 0
   score: 0
+  text: {fileID: 352926582}
 --- !u!114 &352926582
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,10 +26,10 @@ public class EndScreenTally : MonoBehaviour
         {
             bro = GameObject.FindGameObjectWithTag("scoreThing").GetComponent<TextMeshProUGUI>();
             endScreenThing = false;
-
+            bro.text = points.ToString();
             Cursor.lockState = CursorLockMode.None;
         }
-        bro.text = points.ToString();
+        
     }
 
 }

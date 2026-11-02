@@ -47,7 +47,7 @@ public class ScorerKeeper : MonoBehaviour
     Color baseColor;
     Vector3 basePos;
     public int score;
-    TMP_Text text;
+    public TMP_Text text;
     float timer;
 
     void Awake()
