@@ -8,16 +8,9 @@ public class EndScreenTally : MonoBehaviour
     public float points;
 
     public TextMeshProUGUI bro;
-
-    private void Awake()
-    {
-
-    }
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-
-
     }
 
     private void Update()
